@@ -1,4 +1,3 @@
-var operation = '';
 var result = document.getElementById("result")
 function addToResult(value) {
     if(result.value === '' && value == '0')
@@ -10,6 +9,7 @@ function addToResult(value) {
 }
 
 function addOperation(value) {
+    var operation = '';
     if(result.value != '')
     {
         if (operation) {
