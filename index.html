@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&family=Oxanium&display=swap" rel="stylesheet">
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="container">
+		<div class="display-section">
+			<input type="text" name="result" id="result" >
+		</div>
+		<div class="button-section">
+			<div class="button-row" >
+				<button id="btn7" onclick="addToResult('7')">7</button>
+				<button id="btn8" onclick="addToResult('8')">8</button>
+				<button id="btn9" onclick="addToResult('9')">9</button>
+				<button id="divisionBtn" onclick="addOperation('&#247;')">&#247;</button>
+			</div>
+			<div class="button-row">
+				<button id="btn4" onclick="addToResult('4')">4</button>
+				<button id="btn5" onclick="addToResult('5')">5</button>
+				<button id="btn6" onclick="addToResult('6')">6</button>
+				<button id="multiplyBtn" onclick="addOperation('&times;')">&times;</button>
+			</div>
+			<div class="button-row">
+				<button id="btn1" onclick="addToResult('1')">1</button>
+				<button id="btn2" onclick="addToResult('2')">2</button>
+				<button id="btn3" onclick="addToResult('3')">3</button>
+				<button id="subtractBtn" onclick="addOperation('-')">-</button>
+			</div>
+			<div class="button-row">
+				<button id="clearBtn" onclick="clearResult()">C</button>
+				<button id="btn0" onclick="addToResult('0')">0</button>
+				<button id="equalBtn" onclick="calculateResult()">=</button>
+				<button id="addBtn" onclick="addOperation('+')">+</button>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
