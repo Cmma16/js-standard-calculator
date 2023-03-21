@@ -2,6 +2,7 @@ var operation = '';
 var result = document.getElementById("result");
 
 function addToResult(value) {
+    operation = '';
     if(result.value === '' && value == '0')
     {
         //do nothing
