@@ -26,7 +26,7 @@ function clearResult() {
 }
   
 function calculateResult() {
-    if(result.value != '')
+    if(document.getElementById('result').value != '')
     {
         var result = eval(document.getElementById('result').value);
         document.getElementById('result').value = result;
