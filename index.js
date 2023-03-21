@@ -1,4 +1,6 @@
-var result = document.getElementById("result")
+var operation = '';
+var result = document.getElementById("result");
+
 function addToResult(value) {
     if(result.value === '' && value == '0')
     {
@@ -9,7 +11,6 @@ function addToResult(value) {
 }
 
 function addOperation(value) {
-    var operation = '';
     if(result.value != '')
     {
         if (operation) {
@@ -28,8 +29,10 @@ function clearResult() {
 function calculateResult() {
     if(document.getElementById('result').value != '')
     {
-        var result = eval(document.getElementById('result').value);
-        document.getElementById('result').value = result;
+        var expression = document.getElementById('result').value;
+        var fn = new Function('return ' + expression);
+        var resultValue = fn.apply(null);
+        document.getElementById('result').value = resultValue;
         operation = '';
     }
 }
