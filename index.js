@@ -29,10 +29,17 @@ function clearResult() {
 function calculateResult() {
     if(document.getElementById('result').value != '')
     {
-        var expression = document.getElementById('result').value;
-        var fn = new Function('return ' + expression);
-        var resultValue = fn.apply(null);
-        document.getElementById('result').value = resultValue;
-        operation = '';
+        try {
+            var expression = document.getElementById('result').value;
+            var fn = new Function('return ' + expression);
+            var resultValue = fn.apply(null);
+            document.getElementById('result').value = resultValue;
+            operation = '';
+        } catch (e) {
+            // Handle syntax error
+            console.error(e);
+            alert('Invalid input');
+        }
     }
 }
+
